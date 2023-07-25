@@ -1,0 +1,15 @@
+class Stack{
+    private int maxsize;
+    private int[] stack;
+    private int top;
+    public Stack(int maxsize){
+
+    }
+}
+
+
+class stackimple{
+    public static void main(String[] args) {
+        
+    }
+}

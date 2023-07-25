@@ -1,9 +1,0 @@
-import java.util.*;
-
-class imp{
-    public static void main(Strings args[]){
-        system.out.print("hi");
-
-    }
-
-}

@@ -1,15 +1,67 @@
-class Stack{
-    private int maxsize;
-    private int[] stack;
+public class stack {
+    private int maxSize;
+    private int[] stackArray;
     private int top;
-    public Stack(int maxsize){
 
+    public stack(int maxSize) {
+        this.maxSize = maxSize;
+        this.stackArray = new int[maxSize];
+        this.top = -1; // Initialize top to -1 since the stack is empty
+    }
+
+    // Method to check if the stack is empty
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    // Method to check if the stack is full
+    public boolean isFull() {
+        return top == maxSize - 1;
+    }
+
+    // Method to push an element onto the stack
+    public void push(int data) {
+        if (isFull()) {
+            System.out.println("Stack overflow. Cannot push " + data);
+        } else {
+            top++;
+            stack[top] = data;
+        }
+    }
+
+    // Method to pop the top element from the stack and return it
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Cannot pop.");
+            return -1; // Return a sentinel value to indicate an error or underflow
+        } else {
+            int poppedElement = stackArray[top];
+            top--;
+            return poppedElement;
+        }
+    }
+
+    // Method to get the top element of the stack without removing it
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Cannot peek.");
+            return -1; // Return a sentinel value to indicate an error or underflow
+        } else {
+            return stackArray[top];
+        }
     }
 }
-
-
-class stackimple{
+public class stackimple{
+    // Sample usage
     public static void main(String[] args) {
-        
+        Stack stack = new Stack(5);
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println("Top element: " + stack.peek()); // Output: 30
+        System.out.println("Popped element: " + stack.pop()); // Output: 30
+        System.out.println("Top element after pop: " + stack.peek()); // Output: 20
     }
 }
+
+

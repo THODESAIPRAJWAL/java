@@ -1,0 +1,11 @@
+class Solution {
+    public String simplifyPath(String path) {
+        Stack<Char> p=new Stack<>();
+        int x=path.length()-1;
+        int i=0;
+        while(x!=0){
+            char j=path.CharAt(i);
+            
+        }
+    }
+}

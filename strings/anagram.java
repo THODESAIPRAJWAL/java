@@ -1,18 +1,6 @@
 import java.util.*;
-public class anagram {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        String t=sc.nextLine();
-        
-        }
-    }
-}
-import java.util.HashMap;
-import java.util.Map;
-
-public class ValidAnagram {
-    public boolean isAnagram(String s, String t) {
+public class anagram{
+    public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
@@ -42,8 +30,8 @@ public class ValidAnagram {
     }
 
     public static void main(String[] args) {
-        ValidAnagram validAnagram = new ValidAnagram();
-        System.out.println(validAnagram.isAnagram("anagram", "nagaram")); // Output: true
-        System.out.println(validAnagram.isAnagram("rat", "car")); // Output: false
+        System.out.println(isAnagram("anagram", "nagaram")); // Output: true
+        System.out.println(isAnagram("rat", "car")); // Output: false
     }
 }
+        

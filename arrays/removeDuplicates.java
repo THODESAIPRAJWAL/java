@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class removeDuplicates{
-    public static HashMap<Integer,Integer> removeDuplicates(int[] nums) {
+    public static int removeDuplicates(int[] nums) {
         /*HashMap<Integer, Integer> count = new HashMap<>();
         
         // Count the occurrences of each number
@@ -27,11 +27,19 @@ public class removeDuplicates{
         }
         
         return count;*/
-        int j=0;
-        int count=0;
-        for(int i=0;i<nums.length;i++){
-            
+        if (nums.length <= 2) {
+            return nums.length; // No need to remove duplicates if the array length is 2 or less
         }
+    
+        int k = 2; // Start filling the array from the third position
+        for (int i = 2; i < nums.length; i++) {
+            if (nums[i] != nums[k - 2]) {
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+        
     }
     
     public static void main(String[] args) {

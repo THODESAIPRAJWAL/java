@@ -4,7 +4,7 @@
 import java.util.HashMap;
 import java.util.Map;
   
-public class TraversalTheHashMap {
+public class hashap{
     public static void main(String[] args)
     {
 
@@ -13,8 +13,9 @@ public class TraversalTheHashMap {
         n.put(2,"saiprajwal");
         n.put(3,"saireddy");
         for(Map.Entry<Integer,String> e :n.entrySet()) {
+            System.out.println(e);
             System.out.println(e.getKey());
-            System.out.println(e.getValue());
+            System.out.println(e.getValue());}
 
     }
 }

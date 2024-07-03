@@ -5,7 +5,7 @@ public class FindtheIndexoftheFirstOccurrenceinaString {
         for(int i=0;i<haystack.length()-1;i++){
         if(sb.substring(i,i+x).equals(needle)){
             return i;
-            brea
+            break;
         }
     }
     }

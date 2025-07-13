@@ -1,23 +1,6 @@
 package math;
 
-import java.util.LinkedList;
-
-public class isUgly {
-    
-}
-class Solution {
-    public boolean isUgly(int n) {
-        LinkedList list=new LinkedList<>();
-        int i=2;
-        while(n>n/2){
-            if(n%i==0){
-                list.add(i);   
-            }
-            i=i+1;
-        }
-    }
-}
-class Solution {
+public class Solution {
     public boolean isUgly(int n) {
         if (n <= 0) {
             return false;

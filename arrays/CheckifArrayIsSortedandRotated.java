@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class CheckifArrayIsSortedandRotated {
     public static boolean check(int[] nums) {
         int n = nums.length;

@@ -1,6 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class removeDuplicates{
     public static int removeDuplicates(int[] nums) {
         /*HashMap<Integer, Integer> count = new HashMap<>();
